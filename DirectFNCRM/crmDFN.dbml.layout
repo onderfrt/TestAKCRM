@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 29.625, 35.125" name="crmDFN">
+  <DataContextMoniker Name="/crmDFNDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9f5f990d-6a2f-4f03-bbb7-57ad8f84c42a" absoluteBounds="11.75, 10.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/crmDFNDataContext/BorsaAltLisansar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ec9d8d4-2002-431e-ade2-1432531c1164" absoluteBounds="11.765, 11.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4009133e-5c24-44a0-958a-d829b391dad7" absoluteBounds="12, 8.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/crmDFNDataContext/Yetki" />
+      <nestedChildShapes>
+        <elementListCompartment Id="469adaf8-9b61-4aa3-9fb0-f91bb67e63e8" absoluteBounds="12.015, 8.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" absoluteBounds="14.75, 18.125, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/crmDFNDataContext/Calisan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="187d210f-d858-4d41-8f8b-e6cda2a723a5" absoluteBounds="14.765, 18.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03ec2e37-4818-43fc-8401-32a2a579a058" absoluteBounds="12, 27.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/crmDFNDataContext/CalisanTip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c258edb-0532-42b5-9482-c4eee367c886" absoluteBounds="12.015, 27.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c87be85d-5e06-4329-8689-2bd743dce4c6" absoluteBounds="12, 29.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/crmDFNDataContext/Departman" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2031d52d-b96a-4730-88c5-714d245bfa82" absoluteBounds="12.015, 29.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="314cc0c1-d298-4527-9005-2f26de4b38f8" absoluteBounds="17.5, 17.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/crmDFNDataContext/Duyurular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2b46df0-60de-46c7-a34b-d9d91f7d36f2" absoluteBounds="17.515, 18.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70b92d05-e260-4e70-89a8-033b206cf679" absoluteBounds="20.5, 12.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/crmDFNDataContext/EventType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46f9590f-595a-4fda-b24d-161cf0495d81" absoluteBounds="20.515, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62df2526-5e02-44d8-ad0b-276cc4c5def4" absoluteBounds="14.5, 15.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/crmDFNDataContext/Fatura" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bf6c9a5-9ab4-4d41-938b-570efc2f1b50" absoluteBounds="14.515, 15.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6b617f9-b4c2-4e7f-8ae1-2b4b3367cf74" absoluteBounds="9, 14.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/crmDFNDataContext/faturaDonem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="797effb8-4582-48b8-92e5-942840e07fab" absoluteBounds="9.015, 14.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6cec5e8-b592-4d0c-b524-e87a362c8b3c" absoluteBounds="3.5, 19.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/crmDFNDataContext/Il" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b9d083b-7779-45be-95b9-2b6ee161243d" absoluteBounds="3.515, 19.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3814ecd4-4d49-4eab-a015-a3777680161f" absoluteBounds="6.25, 19.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/crmDFNDataContext/Ilce" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65284e0c-b60c-4b36-9b12-b3df3ce6d70f" absoluteBounds="6.265, 19.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" absoluteBounds="9, 18.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/crmDFNDataContext/Iletisim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8703a8f8-5263-4170-a49f-c76e6f687049" absoluteBounds="9.015, 19.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3233db48-873d-4525-887e-f69693bd8b29" absoluteBounds="6.75, 7.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/crmDFNDataContext/Kurumlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63aa49a6-bfc1-4ad4-885d-d56e4fad0f74" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c7aff5d-da16-4a0a-9ba1-37778e3a05f9" absoluteBounds="14.75, 24.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumsalBilgiler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55436a67-5c8f-45f0-8d70-7faf2c238c3f" absoluteBounds="14.765, 25.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34879c36-9cb7-4117-9c1a-78ffd361f5dc" absoluteBounds="11.75, 19.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumSube" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41ecf3a3-0ecc-4b97-97d3-e32d133f9e3b" absoluteBounds="11.765, 19.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cfc589c7-fbe0-4d74-b8c3-3243e4e66653" absoluteBounds="3.5, 3.875, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalep" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef44e8a-6957-476a-bf07-50840642f4f0" absoluteBounds="3.515, 4.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4681f1cc-cb38-40d0-9e98-3bc4ed95f294" absoluteBounds="9, 22.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepDurum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e574d5a1-8980-46a7-9461-9e9ca7443811" absoluteBounds="9.015, 22.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59f0d710-ed17-491e-bbd7-2daf2401dabf" absoluteBounds="11.75, 21.875, 2, 4.2708154296875023">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepleri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1182320-352f-492f-b266-a1c958e69ec8" absoluteBounds="11.765, 22.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e498ec0-adf4-4112-a15f-0597f703668d" absoluteBounds="6.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepLisan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98340036-1601-43e7-9e36-fa226a95065a" absoluteBounds="6.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e30d5dfd-caac-4d84-a670-e2a15c204f0e" absoluteBounds="3.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepLisansOlay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52004e13-c312-4f5d-8a02-08e17a1f91f9" absoluteBounds="3.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5dfabd2-a758-4cfd-8124-e0a2172e95eb" absoluteBounds="9, 24.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepTip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13785026-d3f7-4578-b491-fba0bb8ae446" absoluteBounds="9.015, 24.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cd5d316-1ea4-4758-9631-9d83f71321a9" absoluteBounds="0.75, 1.25, 2, 8.3091455078125">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="262f78c7-2b2c-4182-a4ee-3d2292f435c3" absoluteBounds="0.765, 1.71, 1.9700000000000002, 7.7491455078125009" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66c13c46-a6aa-4fe7-805a-c1f07196cd95" absoluteBounds="6.25, 4.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTalepYorum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ad4937a-b480-43a6-bf53-4beca8d57890" absoluteBounds="6.265, 4.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ced79e84-f338-49ca-abf9-2b986323ca5f" absoluteBounds="14.75, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/crmDFNDataContext/KurumTradeInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6284b14e-654f-4860-bf76-23aa9a50fb79" absoluteBounds="14.765, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9adf450c-6e6a-4c05-86b1-06dc50e4aa99" absoluteBounds="11.75, 5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/crmDFNDataContext/LisansFiyatlari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b50e7ea2-8246-4aa5-91ff-53c6329e5338" absoluteBounds="11.765, 5.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2533b05c-62a8-4002-acd3-97292db3ea35" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/crmDFNDataContext/LoginHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc3e54c4-a60e-41f1-94a4-595790edb956" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f686fcc2-ebc9-439d-a978-6d883e8acc84" absoluteBounds="14.75, 5.75, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/crmDFNDataContext/ModelPortfoy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ee6589b-d47c-4a07-a802-349fb068772d" absoluteBounds="14.765, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b293aa8-b8af-4991-a18a-43ba54aa6f03" absoluteBounds="20.5, 18.125, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/crmDFNDataContext/Musteriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70c7be27-dbdb-4e65-a4ff-c11e7c7b3a56" absoluteBounds="20.515, 18.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f28fbfc2-b68d-458e-b228-4e9dcdb863ac" absoluteBounds="14.75, 8.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/crmDFNDataContext/MusteriMensei" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9eb03acb-5772-46f9-83bf-e987cffd89e8" absoluteBounds="14.765, 9.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9fbf252b-1293-403a-97b1-92f48eb377be" absoluteBounds="17.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/crmDFNDataContext/MusteriTalepler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3948acc-be4c-4266-8d83-5e35c368b5db" absoluteBounds="17.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17ae515a-4f0b-46b8-9714-a6d7daeb02a3" absoluteBounds="6.75, 11.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/crmDFNDataContext/MusteriType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21f66f69-b3a2-4f94-9c5a-300a3f49c518" absoluteBounds="6.765, 12.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08007934-13b8-480e-86ec-eea37061fc45" absoluteBounds="9, 16.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/crmDFNDataContext/ParaBirimi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43c37e27-107d-49aa-9b26-e0477ef112ff" absoluteBounds="9.015, 16.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fc331ae-10cb-4c57-8770-a3f39b8defaa" absoluteBounds="14.5, 11.5, 2, 2.9247054036458344">
+      <DataClassMoniker Name="/crmDFNDataContext/Projeler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3debd54d-5f47-47bd-a2a8-2dae933cb4c3" absoluteBounds="14.515, 11.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2abc965-9730-4395-bbc3-d9f656112e85" absoluteBounds="17.5, 22.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/crmDFNDataContext/SentimentAlgo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d909afd7-302d-406d-a1d1-92cd78614156" absoluteBounds="17.515, 23.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8681f784-4c2d-4254-820e-c88c4d9b67bc" absoluteBounds="20.25, 23, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/crmDFNDataContext/SentimentSembol" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92797999-899e-4cca-904f-fabe137980e3" absoluteBounds="20.265, 23.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf2894c9-35df-4732-ba3f-a68d5c8bee31" absoluteBounds="14.75, 27.25, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/crmDFNDataContext/ServerList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0fa594c-325a-4c7e-ad2a-a701784c087b" absoluteBounds="14.765, 27.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" absoluteBounds="11.75, 14.125, 2, 3.6939111328125005">
+      <DataClassMoniker Name="/crmDFNDataContext/Sozlesmeler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="504f41a2-4ecb-40ba-a34a-2b75a3d3a1b1" absoluteBounds="11.765, 14.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64aec1d1-801b-40a0-bc34-49dfb4bf5d68" absoluteBounds="14.75, 22.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/crmDFNDataContext/Status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34d198c0-2cdc-4876-96c4-aa303be7c780" absoluteBounds="14.765, 23.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="720d169e-9d97-46b8-9b65-abc4eefbae47" absoluteBounds="0.75, 19.125, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/crmDFNDataContext/Ulke" />
+      <nestedChildShapes>
+        <elementListCompartment Id="861a8753-ad86-4885-bfdf-868092fbcea1" absoluteBounds="0.765, 19.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d87fecdc-5883-4d1c-a92a-3d5342c3aa54" absoluteBounds="23.25, 14.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/crmDFNDataContext/UserEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f9b37a5-ded4-4573-a7ad-957c6557e1e9" absoluteBounds="23.265, 15.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5105b0f-2ea0-4999-9ec3-84cf9d5214ef" absoluteBounds="14.75, 31.125, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/crmDFNDataContext/UserExtraInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="860356e3-3c75-4b0c-9fb2-97ede9cab6e0" absoluteBounds="14.765, 31.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0480866f-3dc5-4006-a408-67f8e5866011" absoluteBounds="20.25, 15.5, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/crmDFNDataContext/UserNot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42630bca-4e35-4a06-8928-c00f6b6c2fe6" absoluteBounds="20.265, 15.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d313738-919b-4134-b2e0-baeff963a6f9" absoluteBounds="17.5, 10.875, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/crmDFNDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac01c0c0-f3bc-45e3-91af-cbd2dcd42396" absoluteBounds="17.515, 11.335, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.90625 : 9.69399251302083); (13.90625 : 18.65625); (14.4166666666667 : 18.65625 : JumpStart); (14.5833333333333 : 18.65625 : JumpEnd); (14.75 : 18.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Yetki/Yetki_Calisan" />
+      <nodes>
+        <classShapeMoniker Id="4009133e-5c24-44a0-958a-d829b391dad7" />
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.953125 : 27.375); (13.953125 : 21.3550032552083); (14.2916666666667 : 21.3550032552083 : JumpStart); (14.5833333333333 : 21.3550032552083 : JumpEnd); (14.75 : 21.3550032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/CalisanTip/CalisanTip_Calisan" />
+      <nodes>
+        <classShapeMoniker Id="03ec2e37-4818-43fc-8401-32a2a579a058" />
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 29.375); (14.375 : 29); (14.375 : 20.0056266276042); (14.75 : 20.0056266276042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Departman/Departman_Calisan" />
+      <nodes>
+        <classShapeMoniker Id="c87be85d-5e06-4329-8689-2bd743dce4c6" />
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 18.7604484049479); (17.0729166666667 : 18.7604484049479 : JumpStart); (17.4895833333333 : 18.7604484049479 : JumpEnd); (17.5 : 18.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Calisan/Calisan_Duyurular" />
+      <nodes>
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+        <classShapeMoniker Id="314cc0c1-d298-4527-9005-2f26de4b38f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 20.0392976888021); (6.25 : 20.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Il/Il_Ilce" />
+      <nodes>
+        <classShapeMoniker Id="f6cec5e8-b592-4d0c-b524-e87a362c8b3c" />
+        <classShapeMoniker Id="3814ecd4-4d49-4eab-a015-a3777680161f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 18.96875); (14.4166666666667 : 18.96875 : JumpStart); (14.5833333333333 : 18.96875 : JumpEnd); (14.75 : 18.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_Calisan" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 19.25); (4.5 : 18.9999995); (9 : 18.9999995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Il/Il_Iletisim" />
+      <nodes>
+        <classShapeMoniker Id="f6cec5e8-b592-4d0c-b524-e87a362c8b3c" />
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 20.0392976888021); (9 : 20.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Ilce/Ilce_Iletisim" />
+      <nodes>
+        <classShapeMoniker Id="3814ecd4-4d49-4eab-a015-a3777680161f" />
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 20.0392976888021); (11.4166666666667 : 20.0392976888021 : JumpStart); (11.5833333333333 : 20.0392976888021 : JumpEnd); (11.75 : 20.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_KurumSube" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="34879c36-9cb7-4117-9c1a-78ffd361f5dc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 20.2180599459135); (11.375 : 21.663563077524); (11.375 : 21.5); (11.75 : 21.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_KurumTalepleri" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="59f0d710-ed17-491e-bbd7-2daf2401dabf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 22.9719962565104); (11.75 : 22.9719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumTalepDurum/KurumTalepDurum_KurumTalepleri" />
+      <nodes>
+        <classShapeMoniker Id="4681f1cc-cb38-40d0-9e98-3bc4ed95f294" />
+        <classShapeMoniker Id="59f0d710-ed17-491e-bbd7-2daf2401dabf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 1.84699625651042); (6.5 : 1.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumTalepLisansOlay/KurumTalepLisansOlay_KurumTalepLisan" />
+      <nodes>
+        <classShapeMoniker Id="e30d5dfd-caac-4d84-a670-e2a15c204f0e" />
+        <classShapeMoniker Id="9e498ec0-adf4-4112-a15f-0597f703668d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 24.9719962565104); (11.75 : 24.9719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumTalepTip/KurumTalepTip_KurumTalepleri" />
+      <nodes>
+        <classShapeMoniker Id="f5dfabd2-a758-4cfd-8124-e0a2172e95eb" />
+        <classShapeMoniker Id="59f0d710-ed17-491e-bbd7-2daf2401dabf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.43350341796875); (3.5 : 5.43350341796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumTalepUser/KurumTalepUser_KurumTalep" />
+      <nodes>
+        <classShapeMoniker Id="1cd5d316-1ea4-4758-9631-9d83f71321a9" />
+        <classShapeMoniker Id="cfc589c7-fbe0-4d74-b8c3-3243e4e66653" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.45274983723958); (6.25 : 5.45274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumTalep/KurumTalep_KurumTalepYorum" />
+      <nodes>
+        <classShapeMoniker Id="cfc589c7-fbe0-4d74-b8c3-3243e4e66653" />
+        <classShapeMoniker Id="66c13c46-a6aa-4fe7-805a-c1f07196cd95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 20.6386539713542); (17.0729166666667 : 20.6386539713542 : JumpStart); (17.2395833333333 : 20.6386539713542 : JumpEnd); (17.3229166666667 : 20.6386539713542 : JumpStart); (17.4895833333333 : 20.6386539713542 : JumpEnd); (20.5 : 20.6386539713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Calisan/Calisan_Musteriler" />
+      <nodes>
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+        <classShapeMoniker Id="4b293aa8-b8af-4991-a18a-43ba54aa6f03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 19.3537736347656); (11.1666666666667 : 19.3537736347656 : JumpStart); (11.3333333333333 : 19.3537736347656 : JumpEnd); (11.5 : 19.3537736347656); (11.5 : 21.0785953776042); (14.5 : 21.0785953776042); (14.5 : 22.0689111328125); (21.3124995 : 22.0689111328125); (21.3124995 : 21.8189111328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_Musteriler" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="4b293aa8-b8af-4991-a18a-43ba54aa6f03" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 16.125); (11.375 : 15.75); (11.375 : 5.98159912109375); (11.75 : 5.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/ParaBirimi/ParaBirimi_LisansFiyatlari" />
+      <nodes>
+        <classShapeMoniker Id="08007934-13b8-480e-86ec-eea37061fc45" />
+        <classShapeMoniker Id="9adf450c-6e6a-4c05-86b1-06dc50e4aa99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 12.3950512695312); (14.5 : 12.3950512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/BorsaAltLisansar/BorsaAltLisansar_Projeler" />
+      <nodes>
+        <classShapeMoniker Id="9f5f990d-6a2f-4f03-bbb7-57ad8f84c42a" />
+        <classShapeMoniker Id="8fc331ae-10cb-4c57-8770-a3f39b8defaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 21.8189111328125); (17.125 : 22.1939111328125); (17.125 : 23.8277498372396); (17.3229166666667 : 23.8277498372396 : JumpStart); (17.4895833333333 : 23.8277498372396 : JumpEnd); (17.5 : 23.8277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Calisan/Calisan_SentimentAlgo" />
+      <nodes>
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+        <classShapeMoniker Id="d2abc965-9730-4395-bbc3-d9f656112e85" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.5 : 23.7892976888021); (20.25 : 23.7892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/SentimentAlgo/SentimentAlgo_SentimentSembol" />
+      <nodes>
+        <classShapeMoniker Id="d2abc965-9730-4395-bbc3-d9f656112e85" />
+        <classShapeMoniker Id="8681f784-4c2d-4254-820e-c88c4d9b67bc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 15.9431469726563); (14.5 : 15.9431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Sozlesmeler/Sozlesmeler_Fatura" />
+      <nodes>
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+        <classShapeMoniker Id="62df2526-5e02-44d8-ad0b-276cc4c5def4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 14.1588451538462); (14.375 : 13.5338451538462); (14.375 : 14.583550557492); (14.5338451538462 : 14.4247054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Sozlesmeler/Sozlesmeler_Projeler" />
+      <nodes>
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+        <classShapeMoniker Id="8fc331ae-10cb-4c57-8770-a3f39b8defaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 14.1542297692308); (14.1875 : 13.7167297692308); (14.1875 : 14.7048977113381); (14.5 : 14.3923977113381)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Sozlesmeler/Sozlesmeler_Projeler1" />
+      <nodes>
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+        <classShapeMoniker Id="8fc331ae-10cb-4c57-8770-a3f39b8defaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 14.8469962565104); (11.75 : 14.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/faturaDonem/faturaDonem_Sozlesmeler" />
+      <nodes>
+        <classShapeMoniker Id="b6b617f9-b4c2-4e7f-8ae1-2b4b3367cf74" />
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 16.9455501888021); (11.75 : 16.9455501888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/ParaBirimi/ParaBirimi_Sozlesmeler" />
+      <nodes>
+        <classShapeMoniker Id="08007934-13b8-480e-86ec-eea37061fc45" />
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 19.768040226863); (11.5625 : 18.2490374615385); (11.5625 : 15.8962732226563); (11.75 : 15.8962732226563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_Sozlesmeler" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 20.0392976888021); (3.5 : 20.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Ulke/Ulke_Il" />
+      <nodes>
+        <classShapeMoniker Id="720d169e-9d97-46b8-9b65-abc4eefbae47" />
+        <classShapeMoniker Id="f6cec5e8-b592-4d0c-b524-e87a362c8b3c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 19.15625); (9 : 19.15625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Ulke/Ulke_Iletisim" />
+      <nodes>
+        <classShapeMoniker Id="720d169e-9d97-46b8-9b65-abc4eefbae47" />
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.718748 : 21.8189111328125); (15.718748 : 22.3919328776042); (24.7187495 : 22.3919328776042); (24.7187495 : 17.7997054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Calisan/Calisan_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+        <classShapeMoniker Id="d87fecdc-5883-4d1c-a92a-3d5342c3aa54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.40625 : 13.9439925130208); (22.40625 : 15.15625); (23.25 : 15.15625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/EventType/EventType_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="70b92d05-e260-4e70-89a8-033b206cf679" />
+        <classShapeMoniker Id="d87fecdc-5883-4d1c-a92a-3d5342c3aa54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.75 : 18.125); (15.75 : 16.9848453776042); (17.3229166666667 : 16.9848453776042 : JumpStart); (17.4895833333333 : 16.9848453776042 : JumpEnd); (18.4166666666667 : 16.9848453776042 : JumpStart); (18.5833333333333 : 16.9848453776042 : JumpEnd); (20.25 : 16.9848453776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Calisan/Calisan_UserNot" />
+      <nodes>
+        <classShapeMoniker Id="657bf67f-15a8-41b3-b3f0-586e7d8685ef" />
+        <classShapeMoniker Id="0480866f-3dc5-4006-a408-67f8e5866011" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.5 : 15.359375); (23.25 : 15.359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/User/User_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+        <classShapeMoniker Id="d87fecdc-5883-4d1c-a92a-3d5342c3aa54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.5 : 15.9959627278646); (20.25 : 15.9959627278646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/User/User_UserNot" />
+      <nodes>
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+        <classShapeMoniker Id="0480866f-3dc5-4006-a408-67f8e5866011" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 20.0200512695313); (11.25 : 20.0200512695313); (11.25 : 19.125); (14.5 : 19.125); (14.5 : 17.25); (18.5 : 17.25); (18.5 : 16.4919254557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Iletisim/Iletisim_User" />
+      <nodes>
+        <classShapeMoniker Id="d222d195-6e15-4caf-b2ae-8fff01aa7a2d" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 24.8112992741887); (17.1598244349011 : 24.4014748392876 : JumpStart); (17.2776755650989 : 24.2836237090898 : JumpEnd); (17.3125 : 24.2487992741887); (17.3125 : 13.6834627278646); (17.3229166666667 : 13.6834627278646 : JumpStart); (17.4895833333333 : 13.6834627278646 : JumpEnd); (17.5 : 13.6834627278646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/KurumsalBilgiler/KurumsalBilgiler_User" />
+      <nodes>
+        <classShapeMoniker Id="0c7aff5d-da16-4a0a-9ba1-37778e3a05f9" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.65625 : 9.81899251302083); (16.65625 : 14.7718232477214); (17.5 : 14.7718232477214)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/MusteriMensei/MusteriMensei_User" />
+      <nodes>
+        <classShapeMoniker Id="f28fbfc2-b68d-458e-b228-4e9dcdb863ac" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 27.2807682307692); (17.40625 : 26.6245182307692); (17.40625 : 12.2479793639323); (17.5 : 12.2479793639323)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/ServerList/ServerList_User" />
+      <nodes>
+        <classShapeMoniker Id="cf2894c9-35df-4732-ba3f-a68d5c8bee31" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 14.5670143256836); (14.1041666666667 : 14.5670143256836 : JumpStart); (14.4087167189878 : 14.5670143256836 : JumpEnd); (16.5729166666667 : 14.5670143256836 : JumpStart); (16.7395833333333 : 14.5670143256836 : JumpEnd); (17.3229166666667 : 14.5670143256836 : JumpStart); (17.4895833333333 : 14.5670143256836 : JumpEnd); (17.5 : 14.5670143256836)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Sozlesmeler/Sozlesmeler_User" />
+      <nodes>
+        <classShapeMoniker Id="13eaa7fc-3efa-4cd6-b47f-ba4879f98a8a" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 22.65592401878); (17.15625 : 22.24967401878); (17.15625 : 15.836687773763); (17.3229166666667 : 15.836687773763 : JumpStart); (17.4895833333333 : 15.836687773763 : JumpEnd); (17.5 : 15.836687773763)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/Status/Status_User" />
+      <nodes>
+        <classShapeMoniker Id="64aec1d1-801b-40a0-bc34-49dfb4bf5d68" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 31.2173066923077); (17.21875 : 30.7485566923077); (17.21875 : 12.9657210458984); (17.3229166666667 : 12.9657210458984 : JumpStart); (17.4895833333333 : 12.9657210458984 : JumpEnd); (17.5 : 12.9657210458984)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/UserExtraInfo/UserExtraInfo_User" />
+      <nodes>
+        <classShapeMoniker Id="e5105b0f-2ea0-4999-9ec3-84cf9d5214ef" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dc0f66be-21fd-482b-998a-e8f0cb32f398" absoluteBounds="22.125, 2.25, 2, 20.039532877604167">
+      <DataClassMoniker Name="/crmDFNDataContext/LisansDurum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcb1de20-6c1a-47ed-bd70-db3f4451824a" absoluteBounds="22.14, 2.71, 1.9700000000000002, 19.479532877604164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.125 : 12.2697664388021); (21.875 : 12.2697664388021); (21.875 : 16.3373527018229); (23.25 : 16.3373527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/LisansDurum/LisansDurum_UserEvent" />
+      <nodes>
+        <classShapeMoniker Id="dc0f66be-21fd-482b-998a-e8f0cb32f398" />
+        <classShapeMoniker Id="d87fecdc-5883-4d1c-a92a-3d5342c3aa54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.125 : 14.7219962565104); (19.5 : 14.7219962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/crmDFNDataContext/LisansDurum/LisansDurum_User" />
+      <nodes>
+        <classShapeMoniker Id="dc0f66be-21fd-482b-998a-e8f0cb32f398" />
+        <classShapeMoniker Id="5d313738-919b-4134-b2e0-baeff963a6f9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1a022875-f06d-4c5c-b637-3d4f9626dd77" absoluteBounds="27.375, 1.875, 2, 8.6937483723958326">
+      <DataClassMoniker Name="/crmDFNDataContext/GunSonuToplamlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37c76ead-f317-4bed-a4d9-97d866af2f84" absoluteBounds="27.39, 2.335, 1.9700000000000002, 8.1337483723958321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="546edf97-ef1a-4fe5-9515-8dabebecac9e" absoluteBounds="19.875, 3.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/crmDFNDataContext/TeknikAnalizRaporMailLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6bccc5e-2123-43f2-b6de-c77dfe940687" absoluteBounds="19.89, 4.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07cd16a1-778c-4bc4-9369-65fb65f110db" absoluteBounds="17.75, 6.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/crmDFNDataContext/TeknikAnalizRapor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e73eeaf2-d569-4bf9-8aad-152a992d5fcb" absoluteBounds="17.765, 6.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

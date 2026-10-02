@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AkyCrmNew" Class="crmDFNDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.5.111.101;Initial Catalog=AkyCrmNew;User ID=idealdbtestadmin;Trust Server Certificate=True" SettingsObjectName="DirectFNCRM.Properties.Settings" SettingsPropertyName="AkyCrmNewConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BorsaAltLisansar" Member="BorsaAltLisansars">
+    <Type Name="BorsaAltLisansar">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GKULD2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GKULD1P" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GKULPVA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GKULEND" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GUYED2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GUYED1P" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GUYEPVA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GUYEEND" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BorsaAltLisansar_Projeler" Member="Projelers" ThisKey="id" OtherKey="BorsaLisansId" Type="Projeler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Yetki" Member="Yetkis">
+    <Type Name="Yetki">
+      <Column Name="yetkiID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YetkiAdi" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Yetki_Calisan" Member="Calisans" ThisKey="yetkiID" OtherKey="YetiID" Type="Calisan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Calisan" Member="Calisans">
+    <Type Name="Calisan">
+      <Column Name="calisanID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DepartmanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YetiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iletsimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CalisanTipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CalisanDurum" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="kurumMutserino" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="sifrehata" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KurumSube" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="TemsilciKodu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Calisan_Duyurular" Member="Duyurulars" ThisKey="calisanID" OtherKey="CalisanId" Type="Duyurular" />
+      <Association Name="Calisan_Musteriler" Member="Musterilers" ThisKey="calisanID" OtherKey="TemsilciID" Type="Musteriler" />
+      <Association Name="Calisan_SentimentAlgo" Member="SentimentAlgos" ThisKey="calisanID" OtherKey="calisanId" Type="SentimentAlgo" />
+      <Association Name="Calisan_UserEvent" Member="UserEvents" ThisKey="calisanID" OtherKey="CalisanId" Type="UserEvent" />
+      <Association Name="Calisan_UserNot" Member="UserNots" ThisKey="calisanID" OtherKey="CalisanId" Type="UserNot" />
+      <Association Name="Yetki_Calisan" Member="Yetki" ThisKey="YetiID" OtherKey="yetkiID" Type="Yetki" IsForeignKey="true" />
+      <Association Name="CalisanTip_Calisan" Member="CalisanTip" ThisKey="CalisanTipId" OtherKey="id" Type="CalisanTip" IsForeignKey="true" />
+      <Association Name="Departman_Calisan" Member="Departman" ThisKey="DepartmanId" OtherKey="DepartmanId" Type="Departman" IsForeignKey="true" />
+      <Association Name="Iletisim_Calisan" Member="Iletisim" ThisKey="iletsimId" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalisanTip" Member="CalisanTips">
+    <Type Name="CalisanTip">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalisanTipAdi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="CalisanTip_Calisan" Member="Calisans" ThisKey="id" OtherKey="CalisanTipId" Type="Calisan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departman" Member="Departmans">
+    <Type Name="Departman">
+      <Column Name="DepartmanId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepartmanAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Departman_Calisan" Member="Calisans" ThisKey="DepartmanId" OtherKey="DepartmanId" Type="Calisan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Duyurular" Member="Duyurulars">
+    <Type Name="Duyurular">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Mesaj" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sembol" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CalisanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Calisan_Duyurular" Member="Calisan" ThisKey="CalisanId" OtherKey="calisanID" Type="Calisan" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventType" Member="EventTypes">
+    <Type Name="EventType">
+      <Column Name="EventTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="EventType_UserEvent" Member="UserEvents" ThisKey="EventTypeId" OtherKey="EventTypeId" Type="UserEvent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fatura" Member="Faturas">
+    <Type Name="Fatura">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="faturaTarihi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FaturaBilID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Sozlesmeler_Fatura" Member="Sozlesmeler" ThisKey="FaturaBilID" OtherKey="SozlesmeilID" Type="Sozlesmeler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.faturaDonem" Member="faturaDonems">
+    <Type Name="faturaDonem">
+      <Column Name="DonemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DonemName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="faturaDonem_Sozlesmeler" Member="Sozlesmelers" ThisKey="DonemID" OtherKey="DonemId" Type="Sozlesmeler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Il" Member="Ils">
+    <Type Name="Il">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IlAdi" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UlkeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Oncelik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Il_Ilce" Member="Ilces" ThisKey="Id" OtherKey="IlId" Type="Ilce" />
+      <Association Name="Il_Iletisim" Member="Iletisims" ThisKey="Id" OtherKey="IlId" Type="Iletisim" />
+      <Association Name="Ulke_Il" Member="Ulke" ThisKey="UlkeId" OtherKey="Id" Type="Ulke" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ilce" Member="Ilces">
+    <Type Name="Ilce">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IlceAdi" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IlId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Oncelik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Ilce_Iletisim" Member="Iletisims" ThisKey="Id" OtherKey="IlceId" Type="Iletisim" />
+      <Association Name="Il_Ilce" Member="Il" ThisKey="IlId" OtherKey="Id" Type="Il" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Iletisim" Member="Iletisims">
+    <Type Name="Iletisim">
+      <Column Name="IletisimId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="acikadres" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UlkeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IlId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IlceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tel1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Tel2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Ceptel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Association Name="Iletisim_Calisan" Member="Calisans" ThisKey="IletisimId" OtherKey="iletsimId" Type="Calisan" />
+      <Association Name="Iletisim_KurumSube" Member="KurumSubes" ThisKey="IletisimId" OtherKey="iletisimId" Type="KurumSube" />
+      <Association Name="Iletisim_KurumTalepleri" Member="KurumTalepleris" ThisKey="IletisimId" OtherKey="iletisimId" Type="KurumTalepleri" />
+      <Association Name="Iletisim_Musteriler" Member="Musterilers" ThisKey="IletisimId" OtherKey="IletisimId" Type="Musteriler" />
+      <Association Name="Iletisim_Sozlesmeler" Member="Sozlesmelers" ThisKey="IletisimId" OtherKey="iletisimID" Type="Sozlesmeler" />
+      <Association Name="Iletisim_User" Member="Users" ThisKey="IletisimId" OtherKey="iletisimId" Type="User" />
+      <Association Name="Il_Iletisim" Member="Il" ThisKey="IlId" OtherKey="Id" Type="Il" IsForeignKey="true" />
+      <Association Name="Ilce_Iletisim" Member="Ilce" ThisKey="IlceId" OtherKey="Id" Type="Ilce" IsForeignKey="true" />
+      <Association Name="Ulke_Iletisim" Member="Ulke" ThisKey="UlkeId" OtherKey="Id" Type="Ulke" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kurumlar" Member="Kurumlars">
+    <Type Name="Kurumlar">
+      <Column Name="KurumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PmtsNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KurumAdi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="FxKurumCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KurumIletisimID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MuhasebeKodu" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="faturabilgiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumsalBilgiler" Member="KurumsalBilgilers">
+    <Type Name="KurumsalBilgiler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kurumhesapno" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="KurumSube" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="KurumKullaniciTip" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Not1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="KurumsalBilgiler_User" Member="Users" ThisKey="Id" OtherKey="KurumsalBilgilerId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumSube" Member="KurumSubes">
+    <Type Name="KurumSube">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubeAdi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="iletisimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Iletisim_KurumSube" Member="Iletisim" ThisKey="iletisimId" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalep" Member="KurumTaleps">
+    <Type Name="KurumTalep">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kurumno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="durumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Konu" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="aciklama" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="talepEdenKisi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="talepEdenMail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="talepEdenSube" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="talepEdenTel" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="talepTipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KurumTalep_KurumTalepYorum" Member="KurumTalepYorums" ThisKey="id" OtherKey="kurumTalepId" Type="KurumTalepYorum" />
+      <Association Name="KurumTalepUser_KurumTalep" Member="KurumTalepUser" ThisKey="userid" OtherKey="id" Type="KurumTalepUser" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepDurum" Member="KurumTalepDurums">
+    <Type Name="KurumTalepDurum">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DurumAd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="KurumTalepDurum_KurumTalepleri" Member="KurumTalepleris" ThisKey="id" OtherKey="TalepDurumId" Type="KurumTalepleri" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepleri" Member="KurumTalepleris">
+    <Type Name="KurumTalepleri">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalebiGiren" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalebiYapan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalebiOnaylayan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalepDurumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalepTipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalepTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TalepOnayTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TalepYapilmaTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TemsilciKod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubeAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="iletisimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HesapNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Usename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MusteriAd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MusteriSoyad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PmtsNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Iletisim_KurumTalepleri" Member="Iletisim" ThisKey="iletisimId" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" />
+      <Association Name="KurumTalepDurum_KurumTalepleri" Member="KurumTalepDurum" ThisKey="TalepDurumId" OtherKey="id" Type="KurumTalepDurum" IsForeignKey="true" />
+      <Association Name="KurumTalepTip_KurumTalepleri" Member="KurumTalepTip" ThisKey="TalepTipId" OtherKey="id" Type="KurumTalepTip" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepLisans" Member="KurumTalepLisans">
+    <Type Name="KurumTalepLisan">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalepId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LisansKod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LisansAdi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="LisansOlayId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KurumTalepLisansOlay_KurumTalepLisan" Member="KurumTalepLisansOlay" ThisKey="LisansOlayId" OtherKey="id" Type="KurumTalepLisansOlay" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepLisansOlay" Member="KurumTalepLisansOlays">
+    <Type Name="KurumTalepLisansOlay">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LisansOlayAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="KurumTalepLisansOlay_KurumTalepLisan" Member="KurumTalepLisans" ThisKey="id" OtherKey="LisansOlayId" Type="KurumTalepLisan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepTip" Member="KurumTalepTips">
+    <Type Name="KurumTalepTip">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalepTipAd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="KurumTalepTip_KurumTalepleri" Member="KurumTalepleris" ThisKey="id" OtherKey="TalepTipId" Type="KurumTalepleri" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepUser" Member="KurumTalepUsers">
+    <Type Name="KurumTalepUser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kullaniciTip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kullaniciAdi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="sifre" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="adSoyad" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tcno" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="adres" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="il" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ulke" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="kurumSube" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="kurumMusteriNo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="baslangicTarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="bitisTarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="desktop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="mobile" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="robot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PD1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PD1P" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PD2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PDX" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PVA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PIT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VD1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VD1P" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VD2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VIT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BD1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BD1P" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BD2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DJI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="XETRA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SPI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CBOT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CME" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CBOTM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EUREX" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CMEM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="KurumTalepUser_KurumTalep" Member="KurumTaleps" ThisKey="id" OtherKey="userid" Type="KurumTalep" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTalepYorum" Member="KurumTalepYorums">
+    <Type Name="KurumTalepYorum">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kurumTalepId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="adSoyad" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="yorum" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="KurumTalep_KurumTalepYorum" Member="KurumTalep" ThisKey="kurumTalepId" OtherKey="id" Type="KurumTalep" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumTradeInfo" Member="KurumTradeInfos">
+    <Type Name="KurumTradeInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KurumAdi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="KurumYetkili" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HesapNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HesapParola" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HesapSifre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HisseUrl" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="ViopUrl" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="WebOtpUrl" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="aciklama" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackOffice" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KurumTelNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BackOfficeYetkili" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BackOfficeTel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LisansFiyatlari" Member="LisansFiyatlaris">
+    <Type Name="LisansFiyatlari">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LisansKod" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ParaBirimiId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YurtDisiFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="ParaBirimi_LisansFiyatlari" Member="ParaBirimi" ThisKey="ParaBirimiId" OtherKey="id" Type="ParaBirimi" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginHistory" Member="LoginHistories">
+    <Type Name="LoginHistory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PmtsNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ModelPortfoy" Member="ModelPortfoys">
+    <Type Name="ModelPortfoy">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SembolName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="HedefFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Musteriler" Member="Musterilers">
+    <Type Name="Musteriler">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MusteriAdi" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Yetkili" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BilgiIslem" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MusteriTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tckno" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="KayitTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SonKullaniciId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ilkKullaniciId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TemsilciID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IletisimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Calisan_Musteriler" Member="Calisan" ThisKey="TemsilciID" OtherKey="calisanID" Type="Calisan" IsForeignKey="true" />
+      <Association Name="Iletisim_Musteriler" Member="Iletisim" ThisKey="IletisimId" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MusteriMensei" Member="MusteriMenseis">
+    <Type Name="MusteriMensei">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenseiAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="MusteriMensei_User" Member="Users" ThisKey="id" OtherKey="MusteriMenseiID" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MusteriTalepler" Member="MusteriTaleplers">
+    <Type Name="MusteriTalepler">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="talepdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="hesapkurum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hesapno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adsoyad" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="telno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="remoteHost" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MusteriType" Member="MusteriTypes">
+    <Type Name="MusteriType">
+      <Column Name="MusteriTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriTypeAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParaBirimi" Member="ParaBirimis">
+    <Type Name="ParaBirimi">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParaBirimiAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParaBirimiKod" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Kur" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="ParaBirimi_LisansFiyatlari" Member="LisansFiyatlaris" ThisKey="id" OtherKey="ParaBirimiId" Type="LisansFiyatlari" />
+      <Association Name="ParaBirimi_Sozlesmeler" Member="Sozlesmelers" ThisKey="id" OtherKey="ParaBirimiID" Type="Sozlesmeler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Projeler" Member="Projelers">
+    <Type Name="Projeler">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="yayinDurum" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MusteriNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProjeAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="VarChar(550)" CanBeNull="true" />
+      <Column Name="baslangicTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BitisTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BorsaLisansId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SozlesmeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BorsaAltLisansar_Projeler" Member="BorsaAltLisansar" ThisKey="BorsaLisansId" OtherKey="id" Type="BorsaAltLisansar" IsForeignKey="true" />
+      <Association Name="Sozlesmeler_Projeler" Member="Sozlesmeler" ThisKey="SozlesmeID" OtherKey="SozlesmeilID" Type="Sozlesmeler" IsForeignKey="true" />
+      <Association Name="Sozlesmeler_Projeler1" Member="Sozlesmeler1" ThisKey="SozlesmeID" OtherKey="SozlesmeilID" Type="Sozlesmeler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SentimentAlgo" Member="SentimentAlgos">
+    <Type Name="SentimentAlgo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OlusturmaTar" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuncellemeTar" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Baslik" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Icerik" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="calisanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SentimentAlgo_SentimentSembol" Member="SentimentSembols" ThisKey="id" OtherKey="SentimentAlgoId" Type="SentimentSembol" />
+      <Association Name="Calisan_SentimentAlgo" Member="Calisan" ThisKey="calisanId" OtherKey="calisanID" Type="Calisan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SentimentSembol" Member="SentimentSembols">
+    <Type Name="SentimentSembol">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sembol" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SonFiyat" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SentimentAlgoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SentimentAlgo_SentimentSembol" Member="SentimentAlgo" ThisKey="SentimentAlgoId" OtherKey="id" Type="SentimentAlgo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServerList" Member="ServerLists">
+    <Type Name="ServerList">
+      <Column Name="ServerListID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Server1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Port1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Server2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Port2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Server3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Port3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Server4" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Port4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ChartServer" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ChartPort" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DownloadUrl" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Association Name="ServerList_User" Member="Users" ThisKey="ServerListID" OtherKey="ServerlistID" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sozlesmeler" Member="Sozlesmelers">
+    <Type Name="Sozlesmeler">
+      <Column Name="SozlesmeilID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SozlesmeNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DonemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GuncelDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ParaBirimiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CepFiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tckno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="iletisimID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaturaDurum" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KayitTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Sozlesmeler_Fatura" Member="Faturas" ThisKey="SozlesmeilID" OtherKey="FaturaBilID" Type="Fatura" />
+      <Association Name="Sozlesmeler_Projeler" Member="Projelers" ThisKey="SozlesmeilID" OtherKey="SozlesmeID" Type="Projeler" />
+      <Association Name="Sozlesmeler_Projeler1" Member="Projelers1" ThisKey="SozlesmeilID" OtherKey="SozlesmeID" Type="Projeler" />
+      <Association Name="Sozlesmeler_User" Member="Users" ThisKey="SozlesmeilID" OtherKey="SozlesmeID" Type="User" />
+      <Association Name="faturaDonem_Sozlesmeler" Member="faturaDonem" ThisKey="DonemId" OtherKey="DonemID" Type="faturaDonem" IsForeignKey="true" />
+      <Association Name="ParaBirimi_Sozlesmeler" Member="ParaBirimi" ThisKey="ParaBirimiID" OtherKey="id" Type="ParaBirimi" IsForeignKey="true" />
+      <Association Name="Iletisim_Sozlesmeler" Member="Iletisim" ThisKey="iletisimID" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Status" Member="Status">
+    <Type Name="Status">
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusAciklama" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="Status_User" Member="Users" ThisKey="StatusId" OtherKey="StatusId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ulke" Member="Ulkes">
+    <Type Name="Ulke">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UlkeAdi" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Oncelik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tr_TR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="en_US" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Ulke_Il" Member="Ils" ThisKey="Id" OtherKey="UlkeId" Type="Il" />
+      <Association Name="Ulke_Iletisim" Member="Iletisims" ThisKey="Id" OtherKey="UlkeId" Type="Iletisim" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserEvent" Member="UserEvents">
+    <Type Name="UserEvent">
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventTarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CalisanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SonLisandurumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KapatilanLisans" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="AcilanLisans" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HostName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LisansTarihDegisen" Type="System.String" DbType="VarChar(600)" CanBeNull="true" />
+      <Association Name="Calisan_UserEvent" Member="Calisan" ThisKey="CalisanId" OtherKey="calisanID" Type="Calisan" IsForeignKey="true" />
+      <Association Name="EventType_UserEvent" Member="EventType" ThisKey="EventTypeId" OtherKey="EventTypeId" Type="EventType" IsForeignKey="true" />
+      <Association Name="User_UserEvent" Member="User" ThisKey="UserId" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="LisansDurum_UserEvent" Member="LisansDurum" ThisKey="SonLisandurumID" OtherKey="LisansDurumId" Type="LisansDurum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserExtraInfo" Member="UserExtraInfos">
+    <Type Name="UserExtraInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MesajOnayDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SozlesmeOnayDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ComputerName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="RaporWebUrun" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RaporWebCihaz" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RaporWebSonLoginTarihi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RaporWebBuAyLoginSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RaporWebOncekiAyLoginSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WebMesajKurum" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="WebMesajGrup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Not1" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Not2" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Not3" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="UserExtraInfo_User" Member="Users" ThisKey="id" OtherKey="UserExtraInfoId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserNot" Member="UserNots">
+    <Type Name="UserNot">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CalisanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Calisan_UserNot" Member="Calisan" ThisKey="CalisanId" OtherKey="calisanID" Type="Calisan" IsForeignKey="true" />
+      <Association Name="User_UserNot" Member="User" ThisKey="Userid" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LisansDurumId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TerminalID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SozlesmeNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PmtsNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="iletisimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MusteriMenseiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServerlistID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BaslangicTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tckno" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FXkurum" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="UserExtraInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SozlesmeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KurumsalBilgilerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProNonPro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FireBaseToken" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EmirTeyid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserEvent" Member="UserEvents" ThisKey="UserID" OtherKey="UserId" Type="UserEvent" />
+      <Association Name="User_UserNot" Member="UserNots" ThisKey="UserID" OtherKey="Userid" Type="UserNot" />
+      <Association Name="Iletisim_User" Member="Iletisim" ThisKey="iletisimId" OtherKey="IletisimId" Type="Iletisim" IsForeignKey="true" />
+      <Association Name="KurumsalBilgiler_User" Member="KurumsalBilgiler" ThisKey="KurumsalBilgilerId" OtherKey="Id" Type="KurumsalBilgiler" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="MusteriMensei_User" Member="MusteriMensei" ThisKey="MusteriMenseiID" OtherKey="id" Type="MusteriMensei" IsForeignKey="true" />
+      <Association Name="ServerList_User" Member="ServerList" ThisKey="ServerlistID" OtherKey="ServerListID" Type="ServerList" IsForeignKey="true" />
+      <Association Name="Sozlesmeler_User" Member="Sozlesmeler" ThisKey="SozlesmeID" OtherKey="SozlesmeilID" Type="Sozlesmeler" IsForeignKey="true" />
+      <Association Name="Status_User" Member="Status" ThisKey="StatusId" OtherKey="StatusId" Type="Status" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="UserExtraInfo_User" Member="UserExtraInfo" ThisKey="UserExtraInfoId" OtherKey="id" Type="UserExtraInfo" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="LisansDurum_User" Member="LisansDurum" ThisKey="LisansDurumId" OtherKey="LisansDurumId" Type="LisansDurum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LisansDurum" Member="LisansDurums">
+    <Type Name="LisansDurum">
+      <Column Name="LisansDurumId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YayinDurumu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayL1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayL2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayGS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViopL1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViopLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViopL2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViopGS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TahvilL1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TahvilLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TahvilL2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SaseL1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SaseL2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Amex" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CBOT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CBOTM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CHIX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CME" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CMEM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="COMEX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DJI" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EUREX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LSE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NYMEX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NYMEXM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NYSE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NASDAQ" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SPI" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="XETRA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Futgck" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WINX" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SCMRealTıme" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SCMDownload" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SCMUsable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ROBOT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CepYetki" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProYetki" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VeriAnalitik" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PITE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SentiL1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SentiL2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayL1Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayL1End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayLPStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayLPEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayL2Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayL2End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayXStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayXEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayGSStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayGSEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayPiteStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayPiteEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopL1Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopL1End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopLPStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopLPEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopL2Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopL2End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopGSStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ViopGSEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilL1Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilL1End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilLPStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilLPEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilL2Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TahvilL2End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProYetkiStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProYetkiEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CepYetkiStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CepYetkiEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SentiL1Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SentiL1End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SentiL2Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SentiL2End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KRMD1Start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KRMD1End" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Vd2P" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Vd2PStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Vd2PEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pd2P" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Pd2PStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pd2PEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AnPro" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AnProStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AnProEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TARAMA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TaramaStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TaramaEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MKK" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MKKStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MKKEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CMEStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CMEEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GKKUL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GKKULStart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GKKULEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="LisansDurum_UserEvent" Member="UserEvents" ThisKey="LisansDurumId" OtherKey="SonLisandurumID" Type="UserEvent" />
+      <Association Name="LisansDurum_User" Member="Users" ThisKey="LisansDurumId" OtherKey="LisansDurumId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GunSonuToplamlar" Member="GunSonuToplamlars">
+    <Type Name="GunSonuToplamlar">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TumUserSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IseUserSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrkUserSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MuafUserSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Desktop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Robot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesktopMobile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayYuzeysel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayPlus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayDerinlik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayEndeks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayGs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Analitik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PITE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViopYuzeysel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViopPlus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViopDerinlik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViopGS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TahvilYuzeysel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TahvilPlus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TahvilDerinlik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KapaliUserSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DJI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SPI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XETRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CBOT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CME" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CBOTM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CMEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EUREX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProEkran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NonProEkran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pd2P" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vd2P" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnPro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TARAMA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MKK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GKKUL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TeknikAnalizRaporMailLog" Member="TeknikAnalizRaporMailLogs">
+    <Type Name="TeknikAnalizRaporMailLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RaporId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Baslik" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TalepEdenCalisanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalepTarihi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GonderimTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HataMesaji" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TeknikAnalizRapor" Member="TeknikAnalizRapors">
+    <Type Name="TeknikAnalizRapor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Baslik" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Stocks" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Piyasa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="icerik" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="link" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="BaslangicTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BitisTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SsoYayinda" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

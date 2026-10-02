@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{389FE0CA-E3E1-4691-9306-3B2E5EBF3C5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DirectFNCRM</RootNamespace>
+    <AssemblyName>DirectFNCRM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>crmicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A85289A3BFEFBBFB2F24CB6A0520026B7D462EDF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DirectFNCRM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks, Version=8.1.4315.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\nsoftware\IPWorks 2016 .NET Edition\lib\nsoftware.IPWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks.System">
+      <HintPath>..\..\..\..\..\..\Program Files\nsoftware\IPWorks 2016 .NET Edition\lib\nsoftware.IPWorks.System.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminViews\formCepProEsanliKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formCepProEsanliKontrol.Designer.cs">
+      <DependentUpon>formCepProEsanliKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formChart.designer.cs">
+      <DependentUpon>formChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formClientPushNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formClientPushNotification.Designer.cs">
+      <DependentUpon>formClientPushNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formDosyadanUserIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formDosyadanUserIslemleri.Designer.cs">
+      <DependentUpon>formDosyadanUserIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formDuzeltmeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formDuzeltmeler.Designer.cs">
+      <DependentUpon>formDuzeltmeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formEkstraAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formEkstraAra.designer.cs">
+      <DependentUpon>formEkstraAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formExcelDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formExcelDurum.Designer.cs">
+      <DependentUpon>formExcelDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formHesapMakinesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formHesapMakinesi.Designer.cs">
+      <DependentUpon>formHesapMakinesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formHisseSinyalUserDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formHisseSinyalUserDetay.Designer.cs">
+      <DependentUpon>formHisseSinyalUserDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formHisseSinyalUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formHisseSinyalUsers.Designer.cs">
+      <DependentUpon>formHisseSinyalUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formKurumTalepDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formKurumTalepDetay.Designer.cs">
+      <DependentUpon>formKurumTalepDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formKurumTalepleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formKurumTalepleri.Designer.cs">
+      <DependentUpon>formKurumTalepleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formModelPortfoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formModelPortfoy.Designer.cs">
+      <DependentUpon>formModelPortfoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriFeedBack.designer.cs">
+      <DependentUpon>formMusteriFeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriFeedBackDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriFeedBackDetay.designer.cs">
+      <DependentUpon>formMusteriFeedBackDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formNotAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formNotAra.Designer.cs">
+      <DependentUpon>formNotAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formOlayDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formOlayDetay.Designer.cs">
+      <DependentUpon>formOlayDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formOtomatikBorsaRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formOtomatikBorsaRapor.Designer.cs">
+      <DependentUpon>formOtomatikBorsaRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formPushNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formPushNotification.Designer.cs">
+      <DependentUpon>formPushNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formSedatKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formSedatKontrol.Designer.cs">
+      <DependentUpon>formSedatKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formSentimentAlgo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formSentimentAlgo.Designer.cs">
+      <DependentUpon>formSentimentAlgo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formSentimentAlgoDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formSentimentAlgoDetay.Designer.cs">
+      <DependentUpon>formSentimentAlgoDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formSozlesmeDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formSozlesmeDetay.Designer.cs">
+      <DependentUpon>formSozlesmeDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formAdminAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formAdminAra.Designer.cs">
+      <DependentUpon>formAdminAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formAdminAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formAdminAyarlar.Designer.cs">
+      <DependentUpon>formAdminAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formBaglantiKotrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formBaglantiKotrol.Designer.cs">
+      <DependentUpon>formBaglantiKotrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formAdmin.Designer.cs">
+      <DependentUpon>formAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formCalisancs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formCalisancs.Designer.cs">
+      <DependentUpon>formCalisancs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formDepartman.Designer.cs">
+      <DependentUpon>formDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formFaturaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formFaturaGiris.Designer.cs">
+      <DependentUpon>formFaturaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formKurlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formKurlar.Designer.cs">
+      <DependentUpon>formKurlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formMusteriler.Designer.cs">
+      <DependentUpon>formMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formLisansFiyatlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formLisansFiyatlari.Designer.cs">
+      <DependentUpon>formLisansFiyatlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formOlayGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formOlayGoruntule.Designer.cs">
+      <DependentUpon>formOlayGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formProjeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formProjeler.Designer.cs">
+      <DependentUpon>formProjeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formSubeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formSubeEkle.Designer.cs">
+      <DependentUpon>formSubeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formTeknikAnalizRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formTeknikAnalizRapor.designer.cs">
+      <DependentUpon>formTeknikAnalizRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formTeknikAnalizRaporYeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formTeknikAnalizRaporYeni.designer.cs">
+      <DependentUpon>formTeknikAnalizRaporYeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formToplamAnaliz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formToplamAnaliz.designer.cs">
+      <DependentUpon>formToplamAnaliz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formUserNotscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formUserNotscs.Designer.cs">
+      <DependentUpon>formUserNotscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formYetki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formYetki.Designer.cs">
+      <DependentUpon>formYetki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\formUserDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\formUserDetay.Designer.cs">
+      <DependentUpon>formUserDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViews\KurumSubeCalisanEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViews\KurumSubeCalisanEkle.Designer.cs">
+      <DependentUpon>KurumSubeCalisanEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsEvent.cs" />
+    <Compile Include="crmDFN.cs">
+      <DependentUpon>crmDFN.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="crmDFN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crmDFN.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="extentioncs.cs" />
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSQLAyar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSQLAyar.Designer.cs">
+      <DependentUpon>formSQLAyar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HisseSinyal.cs">
+      <DependentUpon>HisseSinyal.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="HisseSinyal.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HisseSinyal.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Muhasebe\formMuhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muhasebe\formMuhasebe.Designer.cs">
+      <DependentUpon>formMuhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyTools.cs" />
+    <Compile Include="Ortak\FormIletsisimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ortak\FormIletsisimBilgileri.Designer.cs">
+      <DependentUpon>FormIletsisimBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pazarlama\formPazarlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pazarlama\formPazarlama.Designer.cs">
+      <DependentUpon>formPazarlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pazarlama\formPazarlamaAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pazarlama\formPazarlamaAna.Designer.cs">
+      <DependentUpon>formPazarlamaAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerViews\cert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\ConnectionStringManager.cs" />
+    <Compile Include="ServerViews\formIdealListeOku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\formIdealListeOku.Designer.cs">
+      <DependentUpon>formIdealListeOku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerViews\formSaatKotrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\formSaatKotrol.Designer.cs">
+      <DependentUpon>formSaatKotrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerViews\formServerAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\formServerAyarlar.Designer.cs">
+      <DependentUpon>formServerAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerViews\formSslAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\formSslAyarlar.Designer.cs">
+      <DependentUpon>formSslAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerViews\FrmDbSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\FrmDbSettings.Designer.cs">
+      <DependentUpon>FrmDbSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerViews\Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerViews\Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TerminalViews\Terminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminalViews\Terminal.Designer.cs">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminViews\formCepProEsanliKontrol.resx">
+      <DependentUpon>formCepProEsanliKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formChart.resx">
+      <DependentUpon>formChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formClientPushNotification.resx">
+      <DependentUpon>formClientPushNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formDosyadanUserIslemleri.resx">
+      <DependentUpon>formDosyadanUserIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formDuzeltmeler.resx">
+      <DependentUpon>formDuzeltmeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formEkstraAra.resx">
+      <DependentUpon>formEkstraAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formExcelDurum.resx">
+      <DependentUpon>formExcelDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formHesapMakinesi.resx">
+      <DependentUpon>formHesapMakinesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formHisseSinyalUserDetay.resx">
+      <DependentUpon>formHisseSinyalUserDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formHisseSinyalUsers.resx">
+      <DependentUpon>formHisseSinyalUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formKurumTalepDetay.resx">
+      <DependentUpon>formKurumTalepDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formKurumTalepleri.resx">
+      <DependentUpon>formKurumTalepleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formModelPortfoy.resx">
+      <DependentUpon>formModelPortfoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formMusteriFeedBack.resx">
+      <DependentUpon>formMusteriFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formMusteriFeedBackDetay.resx">
+      <DependentUpon>formMusteriFeedBackDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formNotAra.resx">
+      <DependentUpon>formNotAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formOlayDetay.resx">
+      <DependentUpon>formOlayDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formOtomatikBorsaRapor.resx">
+      <DependentUpon>formOtomatikBorsaRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formPushNotification.resx">
+      <DependentUpon>formPushNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formSedatKontrol.resx">
+      <DependentUpon>formSedatKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formSentimentAlgo.resx">
+      <DependentUpon>formSentimentAlgo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formSentimentAlgoDetay.resx">
+      <DependentUpon>formSentimentAlgoDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formSozlesmeDetay.resx">
+      <DependentUpon>formSozlesmeDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formAdminAra.resx">
+      <DependentUpon>formAdminAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formAdminAyarlar.resx">
+      <DependentUpon>formAdminAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formBaglantiKotrol.resx">
+      <DependentUpon>formBaglantiKotrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formFaturaGiris.resx">
+      <DependentUpon>formFaturaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formKurlar.resx">
+      <DependentUpon>formKurlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formMusteriler.resx">
+      <DependentUpon>formMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formLisansFiyatlari.resx">
+      <DependentUpon>formLisansFiyatlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formOlayGoruntule.resx">
+      <DependentUpon>formOlayGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formProjeler.resx">
+      <DependentUpon>formProjeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formSubeEkle.resx">
+      <DependentUpon>formSubeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formTeknikAnalizRapor.resx">
+      <DependentUpon>formTeknikAnalizRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formTeknikAnalizRaporYeni.resx">
+      <DependentUpon>formTeknikAnalizRaporYeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formToplamAnaliz.resx">
+      <DependentUpon>formToplamAnaliz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formUserDetay.resx">
+      <DependentUpon>formUserDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formUserNotscs.resx">
+      <DependentUpon>formUserNotscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crmDFN.dbml.layout">
+      <DependentUpon>crmDFN.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="AdminViews\KurumSubeCalisanEkle.resx">
+      <DependentUpon>KurumSubeCalisanEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSQLAyar.resx">
+      <DependentUpon>formSQLAyar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muhasebe\formMuhasebe.resx">
+      <DependentUpon>formMuhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ortak\FormIletsisimBilgileri.resx">
+      <DependentUpon>FormIletsisimBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pazarlama\formPazarlama.resx">
+      <DependentUpon>formPazarlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pazarlama\formPazarlamaAna.resx">
+      <DependentUpon>formPazarlamaAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ServerViews\formIdealListeOku.resx">
+      <DependentUpon>formIdealListeOku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerViews\formSaatKotrol.resx">
+      <DependentUpon>formSaatKotrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerViews\formServerAyarlar.resx">
+      <DependentUpon>formServerAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerViews\FrmDbSettings.resx">
+      <DependentUpon>FrmDbSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerViews\Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formAdmin.resx">
+      <DependentUpon>formAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formCalisancs.resx">
+      <DependentUpon>formCalisancs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formDepartman.resx">
+      <DependentUpon>formDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViews\formYetki.resx">
+      <DependentUpon>formYetki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="crmDFN.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>crmDFN.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HisseSinyal.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HisseSinyal.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HisseSinyal.dbml.layout">
+      <DependentUpon>HisseSinyal.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crmicon.ico" />
+    <Content Include="DirectFNCRM.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

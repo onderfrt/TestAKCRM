@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HisseSinyal" Class="HisseSinyalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.5.5.230;Initial Catalog=HisseSinyal;Persist Security Info=True;User ID=sa" SettingsObjectName="DirectFNCRM.Properties.Settings" SettingsPropertyName="HisseSinyalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Member" Member="T_Members">
+    <Type Name="T_Member">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Member_TCKN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Fullname" Type="System.String" DbType="VarChar(101) NOT NULL" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Member_Phone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_GUID" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Member_SessionID" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Member_Birthday" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Member_City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Member_Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Member_Address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Member_PostalCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Member_Licences" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Member_LicenceEndDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Member_LastLogin" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Member_InvestmentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Member_Notes" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kvkkAccepted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isSuspended" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="createdOn" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="electronicAccepted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

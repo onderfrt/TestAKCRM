@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HisseSinyal">
+  <DataContextMoniker Name="/HisseSinyalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bd52c15b-6109-4205-a249-4003940fc9da" absoluteBounds="3.625, 1.25, 2, 6.0015283203125">
+      <DataClassMoniker Name="/HisseSinyalDataContext/T_Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87943c33-838a-455a-a758-657f1dc265f8" absoluteBounds="3.6399999999999997, 1.71, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
